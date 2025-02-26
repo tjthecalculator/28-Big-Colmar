@@ -7,10 +7,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header class="ml-6 mr-6">
-        <img src="images/ic-logo.svg" alt="logo"><h1 class="text-2xl">COLMARACADEMY</h1>
-        <nav class="">
-            <ul>
+    <header class="bg-gray-200">
+        <img src="images/ic-logo.svg" alt="logo">
+        <h1 class="text-2xl">COLMARACADEMY</h1>
+        <nav class="h-16 bg-white">
+            <ul class="space-x-4">
                 <li>On campus</li>
                 <li>Online</li>
                 <li>For company</li>
@@ -19,7 +20,7 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero p-8 bg-gray-200">
             <div class="grid grid-cols-2 gap-6">
                 <div>
                     <img src="images/banner.jpg" alt="banner">
@@ -27,12 +28,12 @@
                 <div>
                     <h2 class="font-bold text-3xl">Learn something new everyday</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <button class="bg-slate-800 text-white text-center p-2 w-auto" type="submit">Start Here</button>
+                    <button class="bg-gray-800 text-white text-center p-2 content-center" type="submit">Start Here</button>
                 </div>
             </div>
         </section>
 
-        <section class="information">
+        <section class="information bg-gray-200">
             <div class="grid grid-cols-2 grid-rows-3 gap-6">
                 <div class="col-span-1 row-span-3 p-6">
                     <img src="images/information-main.jpg" alt="information-main">
@@ -40,90 +41,115 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates autem non at odit sapiente modi tenetur eligendi sed. Vitae aperiam sed hic laboriosam ab voluptates expedita earum ut amet possimus!</p>
                     <p class="mb-8 mt-8">Emanuel, Sr Strategist at Hiring.com</p>
                 </div>
-                <div class="p-4">
-                    <img class="" src="images/information-orientation.jpg" alt="information-orientation">
-                    <h2 class="font-semibold text-xl">Orientation Date</h2>
-                    <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
+                <div class="grid grid-cols-2 p-4">
+                    <div>
+                        <img class="p-4" src="images/information-orientation.jpg" alt="information-orientation">
+                    </div>
+                    <div>
+                        <h2 class="font-semibold text-xl">Orientation Date</h2>
+                        <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
+                        <a class="text-blue-500">Read More</a>
+                    </div>
                 </div>
-                <div>
-                    <img src="images/information-campus.jpg" alt="information-campus">
-                    <h2 class="font-semibold text-xl">Our Campus</h2>
-                    <p>Find which campus is close by you</p>
+                <div class="grid grid-cols-2 p-4">
+                    <div>
+                        <img class="p-4" src="images/information-campus.jpg" alt="information-campus">
+                    </div>
+                    <div>
+                        <h2 class="font-semibold text-xl">Our Campus</h2>
+                        <p>Find which campus is close by you</p>
+                        <a class="text-blue-500">Read More</a>
+                    </div>
                 </div>
-                <div>
-                    <img src="images/information-guest-lecture.jpg" alt="information-guest-lecture">
-                    <h2 class="font-semibold text-xl">Our guest lecture</h2>
-                    <p>Join a keynote with Oliver Sack about music in medical treatment</p>
+                <div class="grid grid-cols-2 p-4 bg-slate-300">
+                    <div>
+                        <img class="p-4" src="images/information-guest-lecture.jpg" alt="information-guest-lecture">
+                    </div>
+                    <div>
+                        <h2 class="font-semibold text-xl">Our guest lecture</h2>
+                        <p>Join a keynote with Oliver Sack about music in medical treatment</p>
+                        <a class="text-blue-500">Read More</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="course">
-            <h2 class="text-3xl font-semibold">Start Learning</h2>
-            <div class="grid grid-cols-3 grid-rows-2">
-                <div>
+        <section class="course bg-gray-200">
+            <h2 class="text-3xl font-bold py-8 text-center">Start Learning</h2>
+            <div class="grid grid-cols-3 grid-rows-2 gap-8">
+                <div class="bg-white ml-4">
                     <img src="images/course-software.jpg" alt="course-software">
-                    <h3>Software engineering</h3>
-                    <p>Course</p>
-                    <p>Web Development, Mobile Development, iOT, APIs</p>
+                    <h3 class="font-semibold text-xl ml-4 mt-4">Software engineering</h3>
+                    <p class="ml-4 mb-2">COURSE</p>
+                    <p class="ml-4">Web Development, Mobile Development, iOT, APIs</p>
                 </div>
-                <div>
+                <div class="bg-white">
                     <img src="images/course-computer-art.jpg" alt="course-computer-art">
-                    <h3>Computer art</h3>
-                    <p>Course</p>
-                    <p>Imaging & Design, Web Design, Motion Graphic & Visual Effects, Computer Animation</p>
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-8">Computer art</h3>
+                    <p class="ml-4 mb-2">COURSE</p>
+                    <p class="ml-4">Imaging & Design, Web Design, Motion Graphic & Visual Effects, Computer Animation</p>
                 </div>
-                <div>
+                <div class="bg-white mr-4">
                     <img src="images/course-design.jpg" alt="course-design">
-                    <h3>Design</h3>
-                    <p>Course</p>
-                    <p>User Experience Design, User Research, Visual Design</p>
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-8">Design</h3>
+                    <p class="ml-4 mb-2">COURSE</p>
+                    <p class="ml-4">User Experience Design, User Research, Visual Design</p>
                 </div>
-                <div>
+                <div class="bg-white ml-4">
                     <img src="images/course-data.jpg" alt="course-data">
-                    <h3>Data</h3>
-                    <p>Course</p>
-                    <p>Data Science, Big Data, SQL, Data Visualization</p>
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-8">Data</h3>
+                    <p class="ml-4 mb-2">COURSE</p>
+                    <p class="ml-4">Data Science, Big Data, SQL, Data Visualization</p>
                 </div>
-                <div>
+                <div class="bg-white">
                     <img src="images/course-business.jpg" alt="course-business">
-                    <h3>Business</h3>
-                    <p>Course</p>
-                    <p>Product Development, Business Development, Startup</p>
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-8">Business</h3>
+                    <p class="ml-4 mb-2">COURSE</p>
+                    <p class="ml-4">Product Development, Business Development, Startup</p>
                 </div>
-                <div>
+                <div class="bg-white mr-4">
                     <img src="images/course-marketing.jpg" alt="course-marketing">
-                    <h3>Marketing</h3>
-                    <p>Course</p>
-                    <p>Analytics, Content Marketing, Mobile Marketing</p>
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-8">Marketing</h3>
+                    <p class="ml-4 mb-2">COURSE</p>
+                    <p class="ml-4">Analytics, Content Marketing, Mobile Marketing</p>
                 </div>
             </div>
         </section>
 
-        <section class="thesis">
-            <h2 class="font-bold text-3xl">Thesis exhibit</h2>
+        <section class="thesis bg-gray-200 py-8">
+            <h2 class="font-bold text-3xl py-8 text-center">Thesis exhibit</h2>
             <div class="grid grid-cols-2 grid-rows-2 gap-6">
-                <div class="col-span-1 row-span-2">
+                <div class="col-span-1 row-span-2 ml-6 mr-6">
                     <video src="videos/thesis.mp4"></video>
-                    <h3 class="text-2xl font-semibold">Reimagine urban</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, hic repudiandae dolorum amet veniam illo quaerat non assumenda neque aliquid consectetur. Quod odit velit neque rem perferendis id dolores quasi.</p>
+                    <h3 class="text-2xl font-semibold mt-6 mb-2">Reimagine urban</h3>
+                    <p class="mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, hic repudiandae dolorum amet veniam illo quaerat non assumenda neque aliquid consectetur. Quod odit velit neque rem perferendis id dolores quasi.</p>
                 </div>
-                <div>
-                    <img src="images/thesis-fisma.jpg" alt="thesis-fisma">
-                    <h3 class="text-2xl font-semibold">Fisma: Design and Prototype</h3>
-                    <p>Designer showcase of new prototype product</p>
+                <div class="grid grid-cols-2 bg-slate-300">
+                    <div>
+                        <img class="p-4" src="images/thesis-fisma.jpg" alt="thesis-fisma">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold">Fisma: Design and Prototype</h3>
+                        <p>Designer showcase of new prototype product</p>
+                    </div>
                 </div>
-                <div>
-                    <img src="images/thesis-now-and-then.jpg" alt="thesis-now-and-then">
-                    <h3 class="text-2xl font-semibold">Now and then</h3>
-                    <p>Research study about New York</p>
+                <div class="grid grid-cols-2">
+                    <div>
+                        <img class="p-4" src="images/thesis-now-and-then.jpg" alt="thesis-now-and-then">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold">Now and then</h3>
+                        <p class="">Research study about New York</p>
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
-    <footer>
-        <p>2016 Colmar Academy. All rights reserved</p>
+    <footer class="py-4 px-6 bg-gray-200">
+        <p>&copy;2016 Colmar Academy. All rights reserved</p>
+        <p>Term</p>
+        <p>Privacy</p>
     </footer>
 </body>
 </html>
