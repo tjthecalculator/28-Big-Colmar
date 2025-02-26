@@ -5,9 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>28-Big-Colmar</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .mobile-content {
+            display: none;
+        }
+        .desktop-content {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .mobile-content {
+                display: block;
+            }
+            .desktop-content {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="bg-gray-200">
+    <header class="desktop-content bg-gray-200">
         <img src="images/ic-logo.svg" alt="logo">
         <h1 class="text-2xl">COLMARACADEMY</h1>
         <nav class="h-16 bg-white">
@@ -19,8 +35,16 @@
             </ul>
         </nav>
     </header>
+    <header class="mobile-content bg-gray-200">
+        <div class="grid grid-cols-4 grid-rows-1 h-16 ">
+            <div class="flex justify-center items-center"><img src="images/ic-logo.svg" alt="ic-logo"></div>
+            <div class="flex justify-center items-center"><img src="images/ic-on-campus.svg" alt="ic-on-campus"></div>
+            <div class="flex justify-center items-center"><img src="images/ic-online.svg" alt="ic-online"></div>
+            <div class="flex justify-center items-center"><img src="images/ic-login.svg" alt="ic-login"></div>
+        </div>
+    </header>
     <main>
-        <section class="hero p-8 bg-gray-200">
+        <section class="desktop-content hero p-8 bg-gray-200">
             <div class="grid grid-cols-2 gap-6">
                 <div>
                     <img src="images/banner.jpg" alt="banner">
@@ -33,7 +57,20 @@
             </div>
         </section>
 
-        <section class="information bg-gray-200">
+        <section class="mobile-content hero p-8 bg-gray-200">
+            <div class="grid grid-row-2 gap-6">
+                <div>
+                    <img src="images/banner.jpg" alt="banner">
+                </div>
+                <div>
+                    <h2 class="font-bold text-3xl">Learn something new everyday</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="bg-gray-800 text-white text-center p-2 content-center" type="submit">Start Here</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="desktop-content information bg-gray-200">
             <div class="grid grid-cols-2 grid-rows-3 gap-6">
                 <div class="col-span-1 row-span-3 p-6">
                     <img src="images/information-main.jpg" alt="information-main">
@@ -43,7 +80,7 @@
                 </div>
                 <div class="grid grid-cols-2 p-4">
                     <div>
-                        <img class="p-4" src="images/information-orientation.jpg" alt="information-orientation">
+                        <img class="desktop-content p-4" src="images/information-orientation.jpg" alt="information-orientation">
                     </div>
                     <div>
                         <h2 class="font-semibold text-xl">Orientation Date</h2>
@@ -53,7 +90,7 @@
                 </div>
                 <div class="grid grid-cols-2 p-4">
                     <div>
-                        <img class="p-4" src="images/information-campus.jpg" alt="information-campus">
+                        <img class="desktop-content p-4" src="images/information-campus.jpg" alt="information-campus">
                     </div>
                     <div>
                         <h2 class="font-semibold text-xl">Our Campus</h2>
@@ -63,7 +100,7 @@
                 </div>
                 <div class="grid grid-cols-2 p-4 bg-slate-300">
                     <div>
-                        <img class="p-4" src="images/information-guest-lecture.jpg" alt="information-guest-lecture">
+                        <img class="desktop-content p-4" src="images/information-guest-lecture.jpg" alt="information-guest-lecture">
                     </div>
                     <div>
                         <h2 class="font-semibold text-xl">Our guest lecture</h2>
@@ -74,49 +111,108 @@
             </div>
         </section>
 
-        <section class="course bg-gray-200">
-            <h2 class="text-3xl font-bold py-8 text-center">Start Learning</h2>
-            <div class="grid grid-cols-3 grid-rows-2 gap-8">
-                <div class="bg-white ml-4">
-                    <img src="images/course-software.jpg" alt="course-software">
-                    <h3 class="font-semibold text-xl ml-4 mt-4">Software engineering</h3>
-                    <p class="ml-4 mb-2">COURSE</p>
-                    <p class="ml-4">Web Development, Mobile Development, iOT, APIs</p>
+        <section class="mobile-content information bg-gray-200">
+            <div class="grid grid-cols-1 grid-rows-3 gap-6">
+                <div class="grid grid-rows-2 p-4">
+                    <div>
+                        <img class="mobile-content p-4" src="images/information-orientation-mobile.jpg" alt="information-orientation-mobile">
+                    </div>
+                    <div>
+                        <h2 class="font-semibold text-xl">Orientation Date</h2>
+                        <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
+                        <a class="text-blue-500">Read More</a>
+                    </div>
                 </div>
-                <div class="bg-white">
-                    <img src="images/course-computer-art.jpg" alt="course-computer-art">
-                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-8">Computer art</h3>
-                    <p class="ml-4 mb-2">COURSE</p>
-                    <p class="ml-4">Imaging & Design, Web Design, Motion Graphic & Visual Effects, Computer Animation</p>
+                <div class="grid grid-rows-2 p-4">
+                    <div>
+                        <img class="mobile-content p-4" src="images/information-campus-mobile.jpg" alt="information-campus-mobile">
+                    </div>
+                    <div>
+                        <h2 class="font-semibold text-xl">Our Campus</h2>
+                        <p>Find which campus is close by you</p>
+                        <a class="text-blue-500">Read More</a>
+                    </div>
                 </div>
-                <div class="bg-white mr-4">
-                    <img src="images/course-design.jpg" alt="course-design">
-                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-8">Design</h3>
-                    <p class="ml-4 mb-2">COURSE</p>
-                    <p class="ml-4">User Experience Design, User Research, Visual Design</p>
-                </div>
-                <div class="bg-white ml-4">
-                    <img src="images/course-data.jpg" alt="course-data">
-                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-8">Data</h3>
-                    <p class="ml-4 mb-2">COURSE</p>
-                    <p class="ml-4">Data Science, Big Data, SQL, Data Visualization</p>
-                </div>
-                <div class="bg-white">
-                    <img src="images/course-business.jpg" alt="course-business">
-                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-8">Business</h3>
-                    <p class="ml-4 mb-2">COURSE</p>
-                    <p class="ml-4">Product Development, Business Development, Startup</p>
-                </div>
-                <div class="bg-white mr-4">
-                    <img src="images/course-marketing.jpg" alt="course-marketing">
-                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-8">Marketing</h3>
-                    <p class="ml-4 mb-2">COURSE</p>
-                    <p class="ml-4">Analytics, Content Marketing, Mobile Marketing</p>
+                <div class="grid grid-rows-2 p-4 bg-slate-300">
+                    <div>
+                        <img class="mobile-content p-4" src="images/information-guest-lecture-mobile.jpg" alt="information-guest-lecture-mobile">
+                    </div>
+                    <div>
+                        <h2 class="font-semibold text-xl">Our guest lecture</h2>
+                        <p>Join a keynote with Oliver Sack about music in medical treatment</p>
+                        <a class="text-blue-500">Read More</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="thesis bg-gray-200 py-8">
+        <section class="desktop-content course bg-gray-200">
+            <h2 class="text-3xl font-bold py-8 text-center">Start Learning</h2>
+            <div class="grid grid-cols-3 grid-rows-2 gap-8">
+                <div class="bg-white ml-4">
+                    <img src="images/course-software.jpg" alt="course-software">
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-2">Software engineering</h3>
+                    <p class="ml-4 mb-2">COURSE</p>
+                    <p class="ml-4 mb-6">Web Development, Mobile Development, iOT, APIs</p>
+                </div>
+                <div class="bg-white">
+                    <img src="images/course-computer-art.jpg" alt="course-computer-art">
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-2">Computer art</h3>
+                    <p class="ml-4 mb-2">COURSE</p>
+                    <p class="ml-4 mb-6">Imaging & Design, Web Design, Motion Graphic & Visual Effects, Computer Animation</p>
+                </div>
+                <div class="bg-white mr-4">
+                    <img src="images/course-design.jpg" alt="course-design">
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-2">Design</h3>
+                    <p class="ml-4 mb-2">COURSE</p>
+                    <p class="ml-4 mb-6">User Experience Design, User Research, Visual Design</p>
+                </div>
+                <div class="bg-white ml-4">
+                    <img src="images/course-data.jpg" alt="course-data">
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-2">Data</h3>
+                    <p class="ml-4 mb-2">COURSE</p>
+                    <p class="ml-4 mb-6">Data Science, Big Data, SQL, Data Visualization</p>
+                </div>
+                <div class="bg-white">
+                    <img src="images/course-business.jpg" alt="course-business">
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-2">Business</h3>
+                    <p class="ml-4 mb-2">COURSE</p>
+                    <p class="ml-4 mb-6">Product Development, Business Development, Startup</p>
+                </div>
+                <div class="bg-white mr-4">
+                    <img src="images/course-marketing.jpg" alt="course-marketing">
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-2">Marketing</h3>
+                    <p class="ml-4 mb-2">COURSE</p>
+                    <p class="ml-4 mb-6">Analytics, Content Marketing, Mobile Marketing</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mobile-content course bg-gray-200">
+            <h2 class="text-3xl font-bold py-8 text-center">Start Learning</h2>
+            <div class="grid grid-cols-1 grid-rows-1 gap-1">
+                <div class="bg-gray-400 ml-4 mr-4">
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-6">Software engineering</h3>
+                </div>
+                <div class="bg-gray-400 ml-4 mr-4">
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-6">Computer art</h3>
+                </div>
+                <div class="bg-gray-400 ml-4 mr-4">
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-6">Design</h3>
+                </div>
+                <div class="bg-gray-400 ml-4 mr-4">
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-6">Data</h3>
+                </div>
+                <div class="bg-gray-400 ml-4 mr-4">
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-6">Business</h3>
+                </div>
+                <div class="bg-gray-400 ml-4 mr-4">
+                    <h3 class="font-semibold text-xl ml-4 mt-4 mb-6">Marketing</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="desktop-content thesis bg-gray-200 py-8">
             <h2 class="font-bold text-3xl py-8 text-center">Thesis exhibit</h2>
             <div class="grid grid-cols-2 grid-rows-2 gap-6">
                 <div class="col-span-1 row-span-2 ml-6 mr-6">
@@ -143,6 +239,11 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="mobile-content thesis bg-gray-200 py-8">
+            <h2 class="font-bold text-3xl py-8 text-center">Thesis exhibit</h2>
+            <video src="videos/thesis.mp4"></video>
         </section>
 
     </main>
